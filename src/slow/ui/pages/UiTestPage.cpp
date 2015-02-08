@@ -7,14 +7,11 @@
 
 #include <ui/pages/UiTestPage.h>
 
-#include "slow/ui/UiOp.h"
-#include "slow/ui/ops/UiOpTest.h"
+#include <slow/ui/Ui.h>
 
-#include "slow/ui/Ui.cpp"
+UiTestPage::UiTestPage(Ui* ui) : UiPage(ui) {
 
-//UiTestPage::UiTestPage(Ui* ui) {
-//	this->ui = ui;
-//}
+}
 
 void UiTestPage::createPage() {
 	//elements.reserve(1); //Reserve space for elements we need

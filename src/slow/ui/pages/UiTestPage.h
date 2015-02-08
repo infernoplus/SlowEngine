@@ -9,7 +9,9 @@
 #define UITESTPAGE_H_
 
 #include "slow/ui/UiPage.h"
+
 #include "slow/ui/elements/UiElementButton.h"
+#include "slow/ui/ops/UiOpTest.h"
 
 class Ui;
 

@@ -5,10 +5,14 @@
  *      Author: inferno
  */
 
+#include <iostream>
 #include <ui/ops/UiOpTest.h>
 
+UiOpTest::UiOpTest(Ui* ui, UiPage* page) : UiOp(ui, page) {
+
+}
+
 UiOpTest::~UiOpTest() {
-	// TODO Auto-generated destructor stub
 }
 
 void UiOpTest::execute() {

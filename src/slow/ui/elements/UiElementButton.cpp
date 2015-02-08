@@ -7,7 +7,7 @@
 
 #include <ui/elements/UiElementButton.h>
 
-UiElementButton::UiElementButton(Vert2f pos, Vert2f size, char align, UiOp* opr) {
+UiElementButton::UiElementButton(Vert2f pos, Vert2f size, char align, UiOp* opr) : UiElement(pos, size, align) {
 	this->opr = opr;
 	opr->setOwner(this);
 }
@@ -16,7 +16,7 @@ UiElementButton::~UiElementButton() {
 	// TODO Auto-generated destructor stub
 }
 
-virtual void UiElementButton::handleClick(Screen* screen, unsigned char btn, int type, int x, int y) {
+void UiElementButton::handleClick(Screen* screen, unsigned char btn, int type, int x, int y) {
 	if(contains(screen, Vert2f{x,y}))
 		opr->execute();
 }

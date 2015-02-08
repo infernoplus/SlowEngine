@@ -7,7 +7,7 @@
 
 #include <ui/UiPage.h>
 
-#include "slow/ui/Ui.cpp"
+#include <slow/ui/Ui.h>
 
 UiPage::UiPage(Ui* ui) {
 	this->ui = ui;

@@ -8,9 +8,9 @@
 #ifndef UIOP_H_
 #define UIOP_H_
 
-#include "slow/ui/Ui.h"
-#include "slow/ui/UiPage.h"
-#include "slow/ui/UiElement.h"
+class Ui;
+class UiPage;
+class UiElement;
 
 class UiOp {
 public:

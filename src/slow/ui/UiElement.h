@@ -19,11 +19,16 @@
 
 #include <cstring>
 #include <memory.h>
+
 #include "slow/data/Vertex.hpp"
 #include "slow/data/Screen.hpp"
 
 class UiElement {
 public:
+	Vert2f pos = Vert2f{0.0f, 0.0f};
+	Vert2f size = Vert2f{1.0f,1.0f};
+	char align = 0x00;
+	bool hidden = false;
 	UiElement(Vert2f pos, Vert2f size, char align);
 	virtual ~UiElement();
 
@@ -33,12 +38,6 @@ public:
 	virtual void handleKey(Screen* screen, unsigned char key, int x, int y );
 
 	virtual void draw(Screen* screen);
-
-private:
-	Vert2f pos = Vert2f{0.0f, 0.0f};
-	Vert2f size = Vert2f{1.0f,1.0f};
-	char align = 0x00;
-	bool hidden = false;
 
 	bool contains(Screen* screen, Vert2f v);
 	Vert2f alignPos(Screen* screen);
